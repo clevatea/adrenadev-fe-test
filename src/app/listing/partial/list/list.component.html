@@ -1,0 +1,9 @@
+<div class="bg position-relative pb-3 px-3" [ngStyle]="{ 'background-image': 'url(' + list.Poster + ')' }">
+  <div class="bg-overlay w-100 h-100"></div>
+  <div class="title media d-flex justify-content-between align-items-center font-weight-bold">
+    <div class="media-body text-truncate">
+      {{ list.Title | truncate: 40 }}
+    </div>
+    <div class="arrow-right d-flex align-items-center justify-content-center">></div>
+  </div>
+</div>

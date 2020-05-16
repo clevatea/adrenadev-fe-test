@@ -1,0 +1,23 @@
+<div
+  class="listing-result"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollUpDistance]="1.5"
+  [infiniteScrollThrottle]="50"
+  (scrolled)="onScrollDown()"
+  class="pt-3"
+>
+  <div
+    class="banner px-4 pb-4 d-flex align-items-end justify-content-end flex-column font-weight-bold position-relative overflow-hidden"
+  >
+    <div class="bg-overlay w-100 h-100"></div>
+    <h1 class="font-weight-bold">News Banner</h1>
+    <h2 class="font-weight-bold">Text Preview</h2>
+  </div>
+  <div class="row">
+    <a class="col-lg-6 pt-3" [routerLink]="['/detail', list.imdbID]" *ngFor="let list of listing">
+      <app-list [list]="list"></app-list>
+    </a>
+  </div>
+</div>
+<app-spinner *ngIf="loadingData"></app-spinner>

@@ -1,0 +1,38 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb px-0">
+    <li class="breadcrumb-item" aria-current="page"><a [routerLink]="['/']">HOME</a></li>
+    <li class="breadcrumb-item active" aria-current="page">PRODUCT PAGE</li>
+  </ol>
+</nav>
+<app-spinner *ngIf="loadingData"></app-spinner>
+<div class="row" *ngIf="detailListing">
+  <div class="col-lg-6">
+    <div class="bg-detail w-100 h-100 d-none d-lg-block"
+      [ngStyle]="{ 'background-image': 'url(' + detailListing.Poster + ')' }"></div>
+    <img [src]="detailListing.Poster" class="d-block d-lg-none mb-5" />
+  </div>
+  <div class="col-lg-6 pl-3 pl-lg-5">
+    <div class="genre mb-1 font-weight-bold mt-2">Genre : {{ detailListing.Genre }}</div>
+    <small class="language mb-lg-5 mb-3 d-block">Language : {{ detailListing.Language }}</small>
+    <h1 class="title font-weight-bold mb-lg-5 mb-3">{{ detailListing.Title }}</h1>
+    <h2 class="released mb-3 mb-lg-5">Released Date : {{ detailListing.Released }}</h2>
+    <div class="ratings font-weight-bold mb-3 mb-lg-5" *ngIf="detailListing.Ratings.length">
+      <div class="btn-group" dropdown>
+        <div id="dropdown-menu-ratings" dropdownToggle type="button" class=" dropdown-toggle"
+          aria-controls="dropdown-menu-dividers">
+          Ratings <span class="caret"></span>
+        </div>
+        <ul id="dropdown-menu-ratings" *dropdownMenu class="dropdown-menu" role="menu">
+          <ng-container *ngFor="let rating of detailListing.Ratings; let index=index">
+            <li class="divider dropdown-divider" *ngIf="index > 0"></li>
+            <li class="text-wrap " role="menuitem">
+              <div class="dropdown-item">{{rating.Source}} : {{rating.Value}}</div>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+    <div class="description font-weight-bold mb-2">Description :</div>
+    <p class="plot">{{ detailListing.Plot }}</p>
+  </div>
+</div>

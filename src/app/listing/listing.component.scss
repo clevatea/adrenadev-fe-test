@@ -1,0 +1,15 @@
+.banner {
+  background: url('https://i.picsum.photos/id/866/1336/700.jpg') center center no-repeat;
+  background-size: cover;
+  height: 400px;
+  border-radius: 18px;
+  color: #fff;
+  h1,
+  h2 {
+    position: relative;
+    z-index: 10;
+  }
+  .bg-overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}

@@ -1,0 +1,48 @@
+.bg-detail {
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+img {
+  border-radius: 18px;
+}
+
+.genre {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.released {
+  font-size: 25px;
+}
+
+.description,
+.ratings {
+  font-size: 20px;
+}
+
+.plot {
+  font-size: 14px;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  background-color: transparent;
+
+  .breadcrumb-item {
+    color: #6c757d;
+
+    &.active {
+      color: #000;
+    }
+  }
+  .breadcrumb-item + .breadcrumb-item {
+    &::before {
+      content: '>';
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}

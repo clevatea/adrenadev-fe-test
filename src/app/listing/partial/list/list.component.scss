@@ -1,0 +1,22 @@
+.bg {
+  padding-top: 50.3333%;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  border-radius: 18px;
+
+  .title {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+
+    .arrow-right {
+      background: #fff;
+      color: #000;
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+    }
+  }
+}

@@ -1,26 +1,34 @@
-# AngularTest
+## Prerequisites
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+- Node 12.16.1 or higher
+- NPM 6.13.4 or higher
+- Angular CLI: 9.0.7
 
-## Development server
+## Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+npm install
+```
 
-## Code scaffolding
+## Serve
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+ng serve OR npm run-script ng serve (without Angular CLI)
+open http://localhost:4200
+
+```
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+ng build
+```
 
-## Running unit tests
+## Lint
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+ng lint
+```
 
 ## Further help
 
